@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+.signup-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.signup-container {
+    width: 40%;
+    margin: auto;
+    background-color: rgb(236, 235, 238);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+input[type='text'] , input[type='password'] , input[type='submit'] {
+    width: 80%;
+    margin: auto;
+    margin-bottom: .5rem;
+    padding: .8rem .5rem;
+    border: none;
+    font-size: 1.3rem;
+}
+
+input[type='text']:focus , input[type='password']:focus {
+    outline: 0;
+    border-bottom: 1px green solid;
+}
+
+.submit {
+    margin-top: 1rem;
+    padding: .8rem;
+    border-radius: .5rem;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: rgb(17, 15, 15);
+    color: antiquewhite;
+}
+
+.signup-container h2 {
+   font-size: 5rem;
+   text-align:center;
+}
+
+.error {
+    width: 80%;
+    
+    height: 0;
+    margin: 1.5rem auto;
+    background-color: rgb(220, 95, 95);
+    /* transform: scale(0); */
+    /* display: none; */
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: .4rem;
+}
+
+.errorMsg {
+   background-color: red;
+   padding: .5rem .3rem;
+   color: antiquewhite;
+   border-radius: .5rem;
+   font-weight: 300;
+   text-align: center;
+   font-size: 1.3rem;
+}
+
+.btn-logout {
+    display: block;
+    background-color: rgb(220, 68, 68);
+    width: 15rem;
+    padding: .5rem .3rem;
+    border-radius: .4rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.btn-logout:hover , .btn-admin:hover  {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.home-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dashboard {
+  width: 80%;
+  margin: auto;
+}
+
+
+/* Dashboard styling */
+.dashboard-head {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin: auto;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 1.3rem;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(12, 57, 192);
+    color: white;
+  }
+
+.btn {
+  border: 1px rgb(36, 34, 34) solid;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: .4rem 1.5rem;
+}
+.btn:hover {
+  color: #ddd;
+}
+
+.btn-view {
+   background-color: rgb(76, 147, 76);
+}
+.btn-edit{
+  background-color: rgb(78, 144, 230);
+}
+.btn-delete {
+   background-color: rgb(216, 28, 28);
+}
+
+.head-bar {
+  width:  75%;
+  margin: auto;
+  margin-bottom: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-add {
+  display: inline-block;
+  background-color: rgb(12, 57, 192);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  border-radius: .3rem;
+
+}
+.btn-add:hover {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+#search {
+  
+   border-bottom: 1px green solid;
+   width: 50rem;
+   margin-right: 2rem;
+}
+
+.btn-srch  {
+  background-color: rgb(12, 57, 192);
+  border: none;
+  padding: .5rem .5rem;
+  font-size: 1.4rem;
+  color: #f2f2f2;
+  border-radius: .5rem;
+  justify-self: end;
+}
+
+.logout-container {
+  width: 75%;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-admin {
+  display: inline-block;
+  background-color: rgb(52, 52, 186);
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 1rem;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: .4rem;
+}
+
+@media (max-width:940px) {
+  .signup-container {
+    width: 95%;
+    margin: auto;
+  }
+  .head-bar {
+    flex-direction: column;
+  }
+  #search {
+     width: 85%;
+  }
+  .search-form {
+    width: 80%;
+    margin: 2rem auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
